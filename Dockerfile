@@ -15,4 +15,5 @@ RUN mkdir -p ~/.ssh && \
     chmod 700 ~/.ssh
 RUN bash -c "echo -e 'Host *\n\tStrictHostKeyChecking no\n\n' > ~/.ssh/config"
 
-CMD ["/bin/bash"]
+#CMD ["/bin/bash"]
+CMD exec /bin/bash -c "trap : TERM INT; sleep infinity & wait"
