@@ -1,10 +1,10 @@
 # SMB and SSH clients in Ubuntu
-# 
+#
 # Andrew Hills (a.hills@sheffield.ac.uk)
 
 FROM ubuntu:latest
 
-RUN ln -fs /usr/share/zoneinfo/Europe/London /etc/localtime
+RUN ln -fs /usr/share/zoneinfo/America/Vancouver /etc/localtime
 RUN sed -i 's/# \(.*multiverse$\)/\1/g' /etc/apt/sources.list && \
     apt update && \
     apt -y upgrade && \
